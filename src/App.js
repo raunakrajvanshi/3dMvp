@@ -64,6 +64,7 @@ const config = {
 export default function App() {
   const [scene, setScene] = useState(null);
   const [buffer, setBuffer] = useState(null);
+  let [loading,setLoading]=useState(true)
 
   useEffect(() => {
     async function initialize() {
@@ -85,6 +86,7 @@ export default function App() {
             setBuffer(reader.result);
           };
           reader.readAsArrayBuffer(myBlob);
+          setLoading(fakse)
         });
     }
     initialize();
@@ -92,7 +94,7 @@ export default function App() {
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      {scene ? <Viewer scene={scene} {...preview} {...config}></Viewer> : ""}
+      {scene&&!loading ? <Viewer scene={scene} {...preview} {...config}></Viewer> : "Loading ..."}
     </div>
   );
 }

@@ -77,7 +77,7 @@ export default function App() {
 
   useEffect(() => {
     async function initialize() {
-      let file = await fetch(filePath)
+     await fetch(filePath)
         .then((response) => {
           return response.blob();
         })

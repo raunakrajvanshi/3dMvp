@@ -6,9 +6,7 @@ export default function Viewer({
   shadows,
   contactShadow,
   autoRotate,
-  environment,
   preset,
-  intensity,
   scene,
 }) {
 

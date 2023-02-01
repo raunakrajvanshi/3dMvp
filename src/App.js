@@ -93,7 +93,7 @@ export default function App() {
   }, []);
 
   return (
-    <div style={{ height: "100%", width: "100%" }}>
+    <div style={{ height: "100vh", width: "100%" }}>
       {scene&&!loading ? <Viewer scene={scene} {...preview} {...config}></Viewer> : "Loading ..."}
     </div>
   );

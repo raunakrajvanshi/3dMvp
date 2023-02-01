@@ -86,7 +86,7 @@ export default function App() {
             setBuffer(reader.result);
           };
           reader.readAsArrayBuffer(myBlob);
-          setLoading(fakse)
+          setLoading(false)
         });
     }
     initialize();

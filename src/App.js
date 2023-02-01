@@ -1,6 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import React, { useEffect, useState } from "react";
 import Viewer from "./Components/Viewer";
 import { generateScene } from "./Components/Util";
 import "./styles.css";
